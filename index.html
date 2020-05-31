@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Meta tags Obrigatórias -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="icon" href="favicon.png">
+
+        <title>Register</title>
+        <style>
+            #registeruser{
+                display: none;
+            }
+        </style>
+
+    </head>
+    <body class="bg-dark">
+        <div class="container">
+            
+        <!-- Login -->
+            <section class="row">
+                <div id="loginuser" class="col-lg-4 offset-lg-4 bg-white rounded mt-3">
+                    <h1 class="text-center">Login</h1>
+                    <form class="p-3">
+                        <div class="form-group">
+                            <label for="email">Email Adress</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Your email adress">
+                            <small id="emailHelp" class="form-text text-muted">Your email is safe here.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Your password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        <p class="text-center mt-2"><a href="#" id="newuser">New user? Register</a></p>
+                    </form>
+                </div>
+            </section>
+        <!-- Login -->
+        <!-- Register -->
+            <section class="row">
+                <div id="registeruser" class="col-lg-4 offset-lg-4 bg-white rounded mt-3">
+                    <h1 class="text-center">Register</h1>
+                    <form class="p-3">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="email" class="form-control" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="register">Your email Adress</label>
+                            <input type="email" class="form-control" id="register" aria-describedby="emailHelp" placeholder="Your email adress">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordregister">Your password</label>
+                            <input type="password" class="form-control" id="passwordregister" placeholder="Your password">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordconfirm">Your password</label>
+                            <input type="password" class="form-control" id="passwordconfirm" placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        <p class="text-center mt-2"><a href="#" id="olduser">Already a user? Login</a></p>
+                    </form>   
+                </div>
+            </section>
+            <!-- Register -->
+        </div>
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $("#newuser").click(function(){
+                    $("#loginuser").hide();
+                    $("#registeruser").show();
+                })
+                $("#olduser").click(function(){
+                    $("#registeruser").hide();
+                    $("#loginuser").show();
+                });
+            });
+        </script>
+    </body>
+</html>
